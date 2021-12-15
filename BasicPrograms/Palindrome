@@ -1,0 +1,19 @@
+package BasicPrograms
+import scala.io.StdIn._
+
+object Palindrome {
+  def main(args:Array[String]){
+    val num=readInt
+    var temp=num
+    var sum=0
+    while(temp!=0){
+      var rem=temp%10
+      sum=(sum*10)+rem
+      temp=temp/10
+    }
+    if(sum==num)
+      println(s"$num is palindrome")
+    else
+      println(s"$num is not a palindrome")
+  }
+}
