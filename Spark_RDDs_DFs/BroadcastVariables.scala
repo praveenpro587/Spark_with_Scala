@@ -10,7 +10,7 @@ object BroadcastVariables extends App{
   def loadboringWords():Set[String]={
     
     var boringwords:Set[String]=Set()
-    val lines=Source.fromFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/boringwords.txt").getLines()
+    val lines=Source.fromFile("C:/Users/prave/OneDrive/Desktop/boringwords.txt").getLines()
     
     for(line<-lines){
       boringwords+=line
@@ -24,7 +24,7 @@ object BroadcastVariables extends App{
   val sc=new SparkContext("local[*]","BraodCastVar")
   var nameset=sc.broadcast(loadboringWords)
   
-  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/bigdatacampaigndata.csv")
+  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/bigdatacampaigndata.csv")
   val maprdd=filerdd.map(x=>(x.split(",")(10).toFloat,x.split(",")(0)))
   val flatrdd=maprdd.flatMapValues(x=>x.split(" "))
   val words=flatrdd.map(x=>(x._2.toLowerCase(),x._1))
