@@ -30,7 +30,7 @@ object SolveUnStructFileUsingRDD extends App{
     }
   }
   
-  val ordersRdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/orders_new.csv")
+  val ordersRdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/orders_new.csv")
   
   import spark.implicits._
   
