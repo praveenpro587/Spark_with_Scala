@@ -10,13 +10,13 @@ object BroadcastMoviesDS extends App{
   
   val sc=new SparkContext("local[*]","MoviesRating")
   
-  val ratingsRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/ratings.dat")
+  val ratingsRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/ratings.dat")
   
   // get the movie id and rating
   val splitrdd=ratingsRdd.map(x=>(x.split("::")(1),x.split("::")(2)))
   
   
-  val moviesRDD=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/movies.dat")
+  val moviesRDD=sc.textFile("C:/Users/prave/OneDrive/Desktop/movies.dat")
   val bcast=sc.broadcast(moviesRDD.map(x=>(x.split("::")(0),x.split("::")(1))).collect().toMap)
   //val braodcast=sc.broadcast(moviesRDD)
   // get the o/p=>(100,(4.0,1.0)),(100,(5.0,1.0))
