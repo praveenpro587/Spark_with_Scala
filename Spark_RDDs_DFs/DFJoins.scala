@@ -22,14 +22,14 @@ object DFJoins extends App{
   .format("csv")
   .option("header", true)
   .option("inferschema", true)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/orders.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/orders.csv")
   .load
   
    val CustomersDF=spark.read
   .format("csv")
   .option("header", true)
   .option("inferschema", true)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/customers.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/customers.csv")
   .load
   
   val joinCon=OrdersDf.col("order_customer_id")===CustomersDF.col("customer_id")
