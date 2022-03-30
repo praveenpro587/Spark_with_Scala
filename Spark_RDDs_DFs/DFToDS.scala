@@ -27,7 +27,7 @@ object DFToDS extends App{
   val ordersDf:Dataset[Row]=spark.read
   .option("header",true)
   .option("inferSchema",true)
-  .csv("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/orders.csv")
+  .csv("C:/Users/prave/OneDrive/Desktop/orders.csv")
   
   import spark.implicits._
   val OrdersDS=ordersDf.as[Orders].filter(x=>x.order_id>10)
