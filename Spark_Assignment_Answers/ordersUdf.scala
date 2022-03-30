@@ -25,7 +25,7 @@ object ordersUdf extends App{
   .format("csv")
   .option("inferSchema", true)
   .option("header", true)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/orders.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/orders.csv")
   .load
   
   //df.printSchema()
