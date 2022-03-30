@@ -23,7 +23,7 @@ object SimpleAggEx extends App{
   val OrdersDf=spark.read
   .format("csv")
   .option("header", true)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/order_data.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/order_data.csv")
   .load
   
   //Object Expression
