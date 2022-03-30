@@ -22,7 +22,7 @@ object SparkSqlEx1 extends App{
   .format("csv")
   .option("header", true)
   .option("inferschema", true)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/orders.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/orders.csv")
   .load
   
   ordersDf.createOrReplaceTempView("orders")
