@@ -32,7 +32,7 @@ object StandarLoadingDF extends App{
   .load*/
   
   val DF=spark.read
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/users.parquet")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/users.parquet")
   .load
   
   DF.show(false)
