@@ -18,7 +18,7 @@ object WordCountExample {
     val sc=new SparkContext("local[*]","WC")
       
       //val lines=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark/search_data.txt")
-      val lines=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-week1/search_data.txt")
+      val lines=sc.textFile("C:/Users/prave/OneDrive/Desktop/search_data.txt")
       //lines.foreach(println)
       val Splitwords=lines.flatMap(x=>x.split(" "))
       val words=Splitwords.map(x=>(x,1))
