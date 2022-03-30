@@ -31,7 +31,7 @@ object DFAssign extends App{
   val WindowDF=spark.read
   .format("csv")
   .schema(schema)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/windowdata.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/windowdata.csv")
   .load
   
   WindowDF.show(false)
@@ -39,14 +39,14 @@ object DFAssign extends App{
   WindowDF.write
   .partitionBy("Country","WeekNum")
   .mode(SaveMode.Overwrite)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/windowdataparquet")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/windowdataparquet")
   .save
   
   WindowDF.write
   .format("avro")
   .partitionBy("Country")
   .mode(SaveMode.Overwrite)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/windowdataAVRo")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/windowdataAVRo")
   .save
   
    WindowDF.write
@@ -54,7 +54,7 @@ object DFAssign extends App{
   .partitionBy("Country")
   .mode(SaveMode.Overwrite)
   .option("maxRecordsPerFile", 2000)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/windowdatacsv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/windowdatacsv")
   .save
   
 }
