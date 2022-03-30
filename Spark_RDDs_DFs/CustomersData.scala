@@ -11,7 +11,7 @@ object CustomersData extends App{
   
   val sc=new SparkContext("local[*]","Customers")
   
-  val fileread=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark/customerorders.csv")
+  val fileread=sc.textFile("C:/Users/prave/OneDrive/Desktop/customerorders.csv")
   val maprdd=fileread.map(x=>(x.split(",")(0),x.split(",")(2).toFloat))
   val finalrdd=maprdd.reduceByKey(_+_)
   finalrdd.foreach(println)
