@@ -25,7 +25,7 @@ object WindowAggEx extends App{
   .format("csv")
   .schema(schema)
   .option("inferschema", true)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/windowdata.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/windowdata.csv")
   .load
   
   val mywindow=Window.partitionBy("country")
