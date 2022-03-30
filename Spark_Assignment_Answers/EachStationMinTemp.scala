@@ -21,7 +21,7 @@ object EachStationMinTemp extends App{
   
   val sc=new SparkContext("local[*]","Problem2")
   
-  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-week1/tempdata.csv")
+  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/tempdata.csv")
   val mapdata=filerdd.map(parseLine)
   
   val mintemp=mapdata.filter(x=>x._2=="TMIN")
