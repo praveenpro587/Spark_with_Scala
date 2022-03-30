@@ -32,14 +32,14 @@ object BroadcastJoinDF extends App{
   .format("csv")
   .option("header", true)
   .schema(Orderschema)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/orders.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/orders.csv")
   .load
   
    val CustomersDF=spark.read
   .format("csv")
   .option("header", true)
   .option("inferschema", true)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/customers.csv")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/customers.csv")
   .load
   
   spark.sql("SET spark.sql.autoBroadcastJoinThreshold=-1")
