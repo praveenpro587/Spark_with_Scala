@@ -10,14 +10,14 @@ object Week10Assignment extends App{
   
   val sc=new SparkContext("local[*]","Week10Assgn")
   
-  val ChapterDataRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/Asgn_DS/chapters.csv")
+  val ChapterDataRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/chapters.csv")
   val chapterMap=ChapterDataRdd.map(x=>(x.split(",")(0).toInt,x.split(",")(1).toInt))
 
-  val ViewsRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/Asgn_DS/views1.csv,C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/Asgn_DS/views2.csv,C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/Asgn_DS/views3.csv")
+  val ViewsRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Asgn_DS/views1.csv,C:/Users/prave/OneDrive/Desktop/Asgn_DS/views2.csv,C:/Users/prave/OneDrive/Desktop/views3.csv")
   val viewsmap=ViewsRdd.map(x=>(x.split(",")(0).toInt,x.split(",")(1).toInt))
   //viewsmap.collect.foreach(println)
   
-  val TitleRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/Asgn_DS/titles.csv")
+  val TitleRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/titles.csv")
   val titlemap=TitleRdd.map(x=>(x.split(",")(0).toInt,x.split(",")(1)))
   
   //Finding no of chapters per course
