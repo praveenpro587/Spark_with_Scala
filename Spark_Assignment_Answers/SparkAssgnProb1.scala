@@ -9,7 +9,7 @@ object SparkAssProb1 extends App{
   Logger.getLogger("org").setLevel(Level.ERROR)
   val sc=new SparkContext("local[*]","Assgn1")
   
-  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark/student.txt")
+  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/student.txt")
   /*val agerdd=filerdd.map(x=>x.split(",")(1).toInt)
   for(i<-agerdd){
     if(i>18) println(s"$i Y")
