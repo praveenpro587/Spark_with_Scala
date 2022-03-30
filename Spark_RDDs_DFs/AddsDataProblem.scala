@@ -12,7 +12,7 @@ object AddsDataProblem extends App{
   
   val sc=new SparkContext("local[*]","AddsData")
   
-  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/bigdatacampaigndata.csv")
+  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/bigdatacampaigndata.csv")
   val maprdd=filerdd.map(x=>(x.split(",")(10).toFloat,x.split(",")(0)))
   val flatrdd=maprdd.flatMapValues(x=>x.split(" "))
   val words=flatrdd.map(x=>(x._2,x._1))
