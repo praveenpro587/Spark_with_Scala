@@ -20,12 +20,12 @@ object Week12Assgn extends App{
   
   val EmpDf=spark.read
   .format("json")
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/employee.json")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/employee.json")
   .load()
   
   val DeptDf=spark.read
   .format("json")
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/department.json")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/department.json")
   .load()
   
   
