@@ -20,7 +20,7 @@ object Week12Assgn3 extends App{
   
   case class BatsmanHist(MatchNum:Int,BatsmanName:String,Team:String,Runs:Int,StrikeRate:Double)
   
-  val FileARdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/fileA.txt")
+  val FileARdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/fileA.txt")
   val mapRddA=FileARdd.map(x=>x.split("\t")).map(x=>BatsmanHist(x(0).toInt,x(1),x(2),x(3).toInt,x(4).toDouble))
   
   import spark.implicits._
@@ -32,7 +32,7 @@ object Week12Assgn3 extends App{
  
  case class BatsmanWC(BatsmanName:String,Team:String)
  
- val FileBRdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/fileB.txt")
+ val FileBRdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/fileB.txt")
  
  val mapRddB=FileBRdd.map(x=>x.split("\t")).map(x=>BatsmanWC(x(0),x(1)))
  
