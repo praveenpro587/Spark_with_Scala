@@ -28,7 +28,7 @@ object StringExprUDF extends App{
   val DF=spark.read
   .format("csv")
   .schema(schema)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/dataset1")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/dataset1")
   .load
   
   //Sql/String EXPR UDF
