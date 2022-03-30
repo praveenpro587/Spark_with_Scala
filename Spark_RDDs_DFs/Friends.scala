@@ -16,7 +16,7 @@ object Friends extends App{
   Logger.getLogger("org").setLevel(Level.ERROR)
   val sc=new SparkContext("local[*]","FriendsData")
   
-  val fileread=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark/friendsdata.csv")
+  val fileread=sc.textFile("C:/Users/prave/OneDrive/Desktop/friendsdata.csv")
   //val splitrdd=fileread.map(x=>(x.split("::")(2),x.split("::")(3).toInt))
   val maprdd=fileread.map(parseLine)
   val drdd=maprdd.map(x=>(x._1,(x._2,1)))
