@@ -10,7 +10,7 @@ object ListFromTextFile extends App{
   
   val sc=new SparkContext("local[*]","List")
   
-  val fileRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week2/bigLog.txt")
+  val fileRdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/bigLog.txt")
   val mapRdd=fileRdd.map(x=>(x.split(":")(0),1))
   val reduce=mapRdd.reduceByKey(_+_)
   reduce.collect.foreach(println)
