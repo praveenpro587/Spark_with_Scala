@@ -22,7 +22,7 @@ object MutipleDelimeters extends App{
   
   case class Person(Name:String,Age:Int)
   
-  val filerdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/SampleFile.txt")
+  val filerdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/SampleFile.txt")
   val header=filerdd.first()
   
   val newRdd=filerdd.filter(x=>x!=header)
