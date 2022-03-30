@@ -12,7 +12,7 @@ object WordOperation extends App{
   
   val sc=new SparkContext("local[*]","WordOps")
   
-  val rdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark/sample.txt")
+  val rdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/sample.txt")
   val flat=rdd.flatMap(x=>x.toLowerCase().split(" "))
   //val flat=rdd.flatMap(x=>x.split(" "))
   val mapwords=flat.map(x=>(x,1))
