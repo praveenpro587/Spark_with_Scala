@@ -37,13 +37,13 @@ object Week14Assignment extends App{
  .format("csv")
  .option("header", true)
  .schema(OrdersSchema)
- .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week5/Orders.txt")
+ .option("path", "C:/Users/prave/OneDrive/Desktop/Orders.txt")
  .load()
  
   val CustomersDF=spark.read
  .format("csv")
  .schema(CustomersSchema)
- .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week5/Order_items.txt")
+ .option("path", "C:/Users/prave/OneDrive/Desktop/Order_items.txt")
  .load()
  
 val JoinCon=OrdersDF.col("order_id")===CustomersDF.col("order_item_order_id")
