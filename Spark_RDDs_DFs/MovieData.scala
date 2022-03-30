@@ -8,7 +8,7 @@ object MovieData extends App{
   Logger.getLogger("org").setLevel(Level.ERROR)
   val sc=new SparkContext("local[*]","MoviesData")
   
-  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark/moviedata.data")
+  val filerdd=sc.textFile("C:/Users/prave/OneDrive/Desktop/moviedata.data")
   //filerdd.foreach(println)
   val splitrdd=filerdd.map(x=>x.split("\t")(2).toInt)
   val res=splitrdd.countByValue()
