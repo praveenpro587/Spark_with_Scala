@@ -35,7 +35,7 @@ object DataframeEx extends App{
   val ordersDf:Dataset[Row]=spark.read
   .option("header",true)
   .schema(Orderschema)
-  .csv("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/orders.csv")
+  .csv("C:/Users/prave/OneDrive/Desktop/orders.csv")
   
   /*val groupedDF=ordersDf.repartition(4)
   .where("order_customer_id>1000")
