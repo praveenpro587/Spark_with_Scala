@@ -23,7 +23,7 @@ object DFAssgn2 extends App{
   
   import spark.implicits._
   
-  val WindowDF=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/windowdata.csv")
+  val WindowDF=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/windowdata.csv")
   .map(x=>x.split(","))
   .map(x=>windowdata(x(0),x(1).trim.toInt,x(2).trim.toInt,x(3).trim.toInt,x(4)))
   .toDF()
@@ -34,7 +34,7 @@ object DFAssgn2 extends App{
   WindowDF.write
   .format("json")
   .mode(SaveMode.Overwrite)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/windowdataJson")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/windowdataJson")
   .save
   
 }
