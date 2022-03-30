@@ -18,7 +18,7 @@ object Week12Assgn2MovRating extends App{
   .config(sparkConf)
   .getOrCreate()
   case class Rating(User_Id:Int,Movie_id:Int,Rating:Int,timestamp:String)
-  val RatingRdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/ratings.dat")
+  val RatingRdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/ratings.dat")
   val RatingmapRdd=RatingRdd.map(x=>x.split("::")).map(x=>Rating(x(0).toInt,x(1).toInt,x(2).toInt,x(3)))
   
   import spark.implicits._
@@ -27,7 +27,7 @@ object Week12Assgn2MovRating extends App{
  //ratingDf.show()
   
   case class Movies(Movie_id:Int,Movie_Name:String,Movie_type:String)
-  val MoviesRdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week3/movies.dat")
+  val MoviesRdd=spark.sparkContext.textFile("C:/Users/prave/OneDrive/Desktop/movies.dat")
   
   val movieMapRdd=MoviesRdd.map(x=>x.split("::")).map(x=>Movies(x(0).toInt,x(1),x(2)))
   
