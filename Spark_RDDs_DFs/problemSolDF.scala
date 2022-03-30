@@ -30,7 +30,7 @@ object problemSolDF extends App{
   val DF=spark.read
   .format("csv")
   .schema(schema)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/dataset1")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/dataset1")
   .load
   
   //We can create Column names as below also
