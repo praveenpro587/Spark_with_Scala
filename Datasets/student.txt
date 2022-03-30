@@ -1,0 +1,9 @@
+praveen,25,nidadavole
+prakash,25,jangareddygudem
+sanjay,23,chennai
+ravi,24,tanuku
+pavan,18,tadepalligudem
+ramu,17,chagallu
+rajendra,16,tanuku
+chintu,15,nidadavole
+vamsi,23,tadepalligudem

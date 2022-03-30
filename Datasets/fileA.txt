@@ -1,0 +1,6 @@
+1	Rohit_Sharma	India	200	100.2
+1	Virat_Kohli	India	100	98.02
+1	Steven_Smith	Aus	77	79.23
+35	Clive_Lloyd	WI	29	37
+243	Rohit_Sharma	India	23	150.00
+243	Faf_du_Plesis	SA	17	35.06

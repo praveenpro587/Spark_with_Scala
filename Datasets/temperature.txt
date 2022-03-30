@@ -1,0 +1,12 @@
+1,8pm,yes,4
+2,6pm,yes,4
+3,7pm,yes,4
+2,8pm,yes,6
+3,8pm,yes,1
+1,8pm,yes,6
+4,8pm,yes,4
+1,8pm,yes,2
+4,8pm,yes,3
+3,8pm,yes,6
+5,8pm,yes,8
+5,8pm,yes,4
