@@ -21,7 +21,7 @@ object SolveBigFileReal extends App{
   .format("csv")
   .option("header", true)
   .option("inferSchema", true)
-  .option("path", "C:/Users/prave/OneDrive/Desktop/Trendy Tech/Spark-Week4/biglog.txt")
+  .option("path", "C:/Users/prave/OneDrive/Desktop/biglog.txt")
   .load()
   
   FileDF.createOrReplaceTempView("LogTable")
